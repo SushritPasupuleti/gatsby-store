@@ -34,20 +34,20 @@ module.exports = {
           // Name of the database and collection where are books reside
           dbName: `GetEssentials`,
           collection: 'hospitallists',
-          server: {
-              address: 'http://localhost',
-              port: 27017
-          },
+          // server: {//default
+          //     address: 'http://localhost',
+          //     port: 27017
+          // }, 
           // auth: {
           //     user: 'ado',
           //     password: 'password'
           // },
-          extraParams: {
-              replicaSet: 'Main-shard-0',
-              //ssl: true,
-              //authSource: `admin`,
-              retryWrites: true
-          }
+          // extraParams: {
+          //     //replicaSet: 'Main-shard-0',
+          //     //ssl: true,
+          //     //authSource: `admin`,
+          //     retryWrites: true
+          // }
       }
   },
     // this (optional) plugin enables Progressive Web App + Offline functionality
