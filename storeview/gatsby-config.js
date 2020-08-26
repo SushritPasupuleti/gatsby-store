@@ -27,6 +27,29 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      // The name of the plugin
+      resolve: `gatsby-source-mongodb`,
+      options: {
+          // Name of the database and collection where are books reside
+          dbName: `GetEssentials`,
+          collection: 'hospitallists',
+          server: {
+              address: 'http://localhost',
+              port: 27017
+          },
+          // auth: {
+          //     user: 'ado',
+          //     password: 'password'
+          // },
+          extraParams: {
+              replicaSet: 'Main-shard-0',
+              //ssl: true,
+              //authSource: `admin`,
+              retryWrites: true
+          }
+      }
+  },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
