@@ -36,6 +36,7 @@ const UnitItem = (props) => {
 
                 <p>{unit.displayDescription}</p>
                 <p>Patients: {randomUser}</p>
+                <p>Slot Size: {unit.slotSize}</p>
                 {/* <p>Rating: {starsCount}</p> */}
                 {/*<p>Published: {unit.publishedDate} | ISBN: {unit.isbn}</p>
                     {unit.categories.map(category => category)} */}
