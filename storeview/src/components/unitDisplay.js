@@ -10,10 +10,12 @@ class UnitItem extends React.Component {
             <Layout>
                 <div>
                     <img src={unit.displayPicture} alt={unit.displayName}/>
+                    <p>{unit.hospitalUnitName}</p>
                     <h1>{unit.hospitalName}</h1>
                     <p>Timings - Monday{unit.timings.Monday.hours.map(hour => (<span key={hour}>{hour}, </span>))}</p>
-                    {/* <p>{unit.longDescription}</p>
-                    <p>Published: {unit.publishedDate} | ISBN: {unit.isbn}</p>
+                    
+                    <p>{unit.displayDescription}</p>
+                    {/*<p>Published: {unit.publishedDate} | ISBN: {unit.isbn}</p>
                     {unit.categories.map(category => category)} */}
                 </div>
             </Layout>
