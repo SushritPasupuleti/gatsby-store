@@ -42,4 +42,16 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     }
+
+    for (const { node } of data.allMongodbGetEssentialsHospitalunits.edges) {
+        console.log("Node: ", node)
+        createPage({
+            path: `/unit/${node.id}/`,
+            //path: `/${node.hospitalName}/${node.hospitalUnitCategoryName}/${node.id}/`,
+            component: pageTemplate,
+            context: {
+                id: node.id,
+            },
+        })
+    }
 }
