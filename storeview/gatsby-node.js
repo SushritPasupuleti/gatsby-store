@@ -15,17 +15,9 @@ exports.createPages = async ({ graphql, actions }) => {
         allMongodbGetEssentialsHospitalunits {
             edges {
                 node {
-              id
-              displayName
-              displayPicture
-              hospitalName
-              displayDescription
-              hospitalUnitName
-              hospitalUnitCategoryName
-              openCheck
-              slotSize
+                    id
+                }
             }
-          }
         }
     }
   `)
